@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Simulasi Pendidikan Pancasila</title>
+<title>Simulasi Pendidikan Pancasila - Kelas XII</title>
 <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -23,8 +23,6 @@ body {
   align-items: center;
   justify-content: center;
 }
-
-/* ==== DEKORASI BACKGROUND BATIK ==== */
 body::before {
   content: "";
   position: fixed;
@@ -37,12 +35,11 @@ body::before {
   pointer-events: none;
   z-index: 0;
 }
-
 .container {
   position: relative;
   z-index: 1;
   width: 100%;
-  max-width: 820px;
+  max-width: 880px;
   background: #ffffff;
   padding: 32px;
   border-radius: 28px;
@@ -52,7 +49,6 @@ body::before {
     0 0 0 8px rgba(220,38,38,0.15);
   animation: fadeInUp 0.7s cubic-bezier(0.16, 1, 0.3, 1);
 }
-
 @keyframes fadeInUp {
   from { opacity: 0; transform: translateY(40px) scale(0.97); }
   to { opacity: 1; transform: translateY(0) scale(1); }
@@ -62,15 +58,14 @@ body::before {
 header {
   background: linear-gradient(135deg, #991b1b 0%, #dc2626 45%, #f59e0b 100%);
   color: white;
-  padding: 40px 24px 34px;
+  padding: 38px 24px 32px;
   border-radius: 22px;
   text-align: center;
   position: relative;
   overflow: hidden;
   box-shadow: 0 12px 30px rgba(220, 38, 38, 0.4);
+  margin-bottom: 22px;
 }
-
-/* Ornamen lingkaran emas */
 header::before {
   content: "";
   position: absolute;
@@ -87,11 +82,8 @@ header::after {
   background: radial-gradient(circle, rgba(255,255,255,0.12), transparent 70%);
   border-radius: 50%;
 }
-
-/* Garuda SVG */
 header .garuda {
-  width: 70px;
-  height: 70px;
+  width: 70px; height: 70px;
   margin: 0 auto 10px;
   display: block;
   filter: drop-shadow(0 4px 10px rgba(0,0,0,0.3));
@@ -101,10 +93,9 @@ header .garuda {
   0%,100% { transform: translateY(0); }
   50% { transform: translateY(-6px); }
 }
-
 header h1 {
   font-family: 'Baloo 2', cursive;
-  font-size: 28px;
+  font-size: 27px;
   font-weight: 800;
   letter-spacing: 1.2px;
   margin-bottom: 8px;
@@ -112,7 +103,6 @@ header h1 {
   position: relative;
   z-index: 1;
 }
-
 header p {
   font-size: 13.5px;
   opacity: 0.95;
@@ -120,7 +110,6 @@ header p {
   position: relative;
   z-index: 1;
 }
-
 header .tagline {
   display: inline-block;
   margin-top: 12px;
@@ -133,7 +122,7 @@ header .tagline {
   border: 1px solid rgba(255,255,255,0.3);
 }
 
-/* ===== PANCA SILA STRIP ===== */
+/* ===== SILA STRIP ===== */
 .sila-strip {
   display: flex;
   justify-content: center;
@@ -154,7 +143,6 @@ header .tagline {
   color: #991b1b;
   min-width: 78px;
   transition: all 0.3s ease;
-  cursor: default;
 }
 .sila-badge .num {
   width: 26px; height: 26px;
@@ -174,7 +162,7 @@ header .tagline {
   border-color: #dc2626;
 }
 
-/* ===== IDENTITAS ===== */
+/* ===== H2 UMUM ===== */
 h2 {
   font-family: 'Baloo 2', cursive;
   font-size: 22px;
@@ -185,13 +173,174 @@ h2 {
   gap: 10px;
 }
 
-#identity { animation: fadeIn 0.5s ease; }
-@keyframes fadeIn { from {opacity:0;} to {opacity:1;} }
-
-#identity h2::before {
-  content: "📝";
-  font-size: 26px;
+/* ===== PEMBUKA ===== */
+#welcome {
+  padding: 10px;
+  animation: fadeInUp 0.7s ease;
 }
+
+.welcome-hero {
+  background: linear-gradient(135deg, #fff7ed, #fef2f2);
+  border: 3px solid #fecaca;
+  border-radius: 20px;
+  padding: 28px 24px;
+  margin-bottom: 20px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.welcome-hero::before {
+  content: "🇮🇩";
+  position: absolute;
+  top: -20px; right: -10px;
+  font-size: 130px;
+  opacity: 0.08;
+  transform: rotate(15deg);
+}
+.welcome-hero h2 {
+  justify-content: center;
+  font-size: 26px;
+  margin-bottom: 10px;
+}
+.welcome-hero h2::before { content: "🙏"; font-size: 30px; }
+.welcome-hero p {
+  font-size: 14.5px;
+  line-height: 1.8;
+  color: #475569;
+  max-width: 620px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+.welcome-hero .greeting {
+  font-family: 'Baloo 2', cursive;
+  font-size: 22px;
+  color: #dc2626;
+  margin-bottom: 10px;
+  position: relative;
+  z-index: 1;
+}
+
+.welcome-quote {
+  background: linear-gradient(135deg, #fef9e7, #fef3c7);
+  border-left: 6px solid #f59e0b;
+  border-radius: 14px;
+  padding: 18px 22px;
+  margin: 20px 0;
+  font-style: italic;
+  color: #78350f;
+  font-size: 14px;
+  line-height: 1.7;
+  position: relative;
+}
+.welcome-quote::before {
+  content: "❝";
+  font-size: 40px;
+  color: #f59e0b;
+  opacity: 0.5;
+  position: absolute;
+  top: 0;
+  left: 10px;
+  font-family: serif;
+}
+.welcome-quote::after {
+  content: "— Ir. Soekarno";
+  display: block;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  text-align: right;
+  margin-top: 8px;
+  color: #b45309;
+}
+
+.tujuan-box {
+  background: #f0f9ff;
+  border: 2px solid #bae6fd;
+  border-radius: 16px;
+  padding: 20px;
+  margin: 18px 0;
+}
+.tujuan-box h3 {
+  font-family: 'Baloo 2', cursive;
+  color: #0369a1;
+  font-size: 18px;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.tujuan-box h3::before { content: "🎯"; font-size: 22px; }
+.tujuan-box ul {
+  list-style: none;
+  padding-left: 0;
+}
+.tujuan-box li {
+  padding: 8px 0 8px 30px;
+  font-size: 14px;
+  color: #334155;
+  position: relative;
+  line-height: 1.5;
+}
+.tujuan-box li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: #10b981;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.petunjuk-box {
+  background: linear-gradient(135deg, #fff7ed, #ffedd5);
+  border: 2px solid #fed7aa;
+  border-radius: 16px;
+  padding: 20px;
+  margin: 18px 0;
+}
+.petunjuk-box h3 {
+  font-family: 'Baloo 2', cursive;
+  color: #c2410c;
+  font-size: 18px;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.petunjuk-box h3::before { content: "📌"; font-size: 22px; }
+.petunjuk-box ol {
+  padding-left: 22px;
+}
+.petunjuk-box li {
+  padding: 6px 0;
+  font-size: 14px;
+  color: #44403c;
+  line-height: 1.5;
+}
+
+.warning-note {
+  background: linear-gradient(135deg, #fef2f2, #fee2e2);
+  border: 2px dashed #f87171;
+  border-radius: 14px;
+  padding: 16px 20px;
+  margin: 18px 0;
+  color: #991b1b;
+  font-size: 13.5px;
+  font-weight: 500;
+  line-height: 1.6;
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+.warning-note::before {
+  content: "⚠️";
+  font-size: 28px;
+  flex-shrink: 0;
+}
+
+/* ===== FORM ===== */
+#identity { animation: fadeInUp 0.6s ease; }
+#identity h2::before { content: "📝"; font-size: 26px; }
 
 label {
   font-weight: 600;
@@ -201,7 +350,6 @@ label {
   margin-top: 14px;
   margin-bottom: 2px;
 }
-
 .input-wrapper { position: relative; }
 .input-wrapper::before {
   position: absolute;
@@ -225,101 +373,11 @@ input {
   transition: all 0.3s ease;
   background: #fffafa;
 }
-
 input:focus {
   outline: none;
   border-color: #dc2626;
   background: #ffffff;
   box-shadow: 0 0 0 4px rgba(220, 38, 38, 0.12);
-  transform: translateY(-1px);
-}
-
-/* ===== KASUS ===== */
-.case {
-  background: linear-gradient(135deg, #fff7ed 0%, #fef2f2 100%);
-  padding: 22px 20px 20px 20px;
-  border-left: 6px solid #dc2626;
-  border-radius: 16px;
-  margin: 22px 0;
-  line-height: 1.75;
-  font-size: 15px;
-  position: relative;
-  box-shadow: 0 4px 14px rgba(220,38,38,0.08);
-}
-
-.case::before {
-  content: "💭 STUDI KASUS";
-  position: absolute;
-  top: -13px;
-  left: 18px;
-  background: linear-gradient(135deg, #dc2626, #f59e0b);
-  color: white;
-  padding: 4px 14px;
-  border-radius: 10px;
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 0.8px;
-  box-shadow: 0 4px 10px rgba(220,38,38,0.3);
-}
-
-/* ===== PILIHAN JAWABAN ===== */
-.option {
-  display: flex;
-  align-items: flex-start;
-  gap: 12px;
-  padding: 16px 18px;
-  border: 2px solid #f1e4e4;
-  border-radius: 16px;
-  margin: 11px 0;
-  cursor: pointer;
-  background: #ffffff;
-  transition: all 0.25s ease;
-  font-size: 14.5px;
-  line-height: 1.55;
-  position: relative;
-}
-
-.option:hover {
-  background: #fff7f7;
-  border-color: #fca5a5;
-  transform: translateX(5px);
-  box-shadow: 0 6px 16px rgba(220, 38, 38, 0.13);
-}
-
-.option input {
-  width: 20px;
-  height: 20px;
-  margin: 0;
-  margin-top: 1px;
-  accent-color: #dc2626;
-  flex-shrink: 0;
-  cursor: pointer;
-}
-
-.option .letter {
-  width: 28px;
-  height: 28px;
-  border-radius: 8px;
-  background: linear-gradient(135deg, #fee2e2, #fecaca);
-  color: #991b1b;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: 700;
-  font-size: 14px;
-  flex-shrink: 0;
-  transition: all 0.25s;
-}
-
-.option:has(input:checked) {
-  background: linear-gradient(135deg, #fef2f2, #fee2e2);
-  border-color: #dc2626;
-  box-shadow: 0 6px 18px rgba(220, 38, 38, 0.22);
-}
-.option:has(input:checked) .letter {
-  background: linear-gradient(135deg, #dc2626, #f59e0b);
-  color: white;
-  transform: rotate(-6deg) scale(1.1);
 }
 
 /* ===== TOMBOL ===== */
@@ -340,7 +398,6 @@ button {
   position: relative;
   overflow: hidden;
 }
-
 button::after {
   content: "";
   position: absolute;
@@ -350,7 +407,6 @@ button::after {
   transition: left 0.5s;
 }
 button:hover::after { left: 100%; }
-
 button:hover {
   transform: translateY(-3px);
   box-shadow: 0 12px 28px rgba(220, 38, 38, 0.5);
@@ -358,50 +414,28 @@ button:hover {
 }
 button:active { transform: translateY(-1px); }
 
-#check::before { content: "✓ "; }
 #next::before { content: "➜ "; }
-#identity button::before { content: "🚀 "; }
-#result button::before { content: "🔄 "; }
+#welcome button::before { content: "🚀 "; }
+#identity button::before { content: "▶️ "; }
 
-/* ===== FEEDBACK ===== */
-.feedback {
-  padding: 18px;
-  border-radius: 16px;
-  margin-top: 18px;
-  line-height: 1.75;
-  font-size: 14.5px;
-  animation: slideIn 0.45s cubic-bezier(0.16, 1, 0.3, 1);
-  position: relative;
-  padding-left: 56px;
+.btn-green {
+  background: linear-gradient(135deg, #10b981, #059669) !important;
+  box-shadow: 0 8px 22px rgba(16, 185, 129, 0.35) !important;
+}
+.btn-green:hover {
+  background: linear-gradient(135deg, #34d399, #10b981) !important;
+  box-shadow: 0 12px 28px rgba(16, 185, 129, 0.5) !important;
 }
 
-.feedback::before {
-  position: absolute;
-  left: 16px;
-  top: 16px;
-  font-size: 26px;
+.btn-secondary {
+  background: linear-gradient(135deg, #64748b, #475569) !important;
+  box-shadow: 0 8px 22px rgba(100, 116, 139, 0.35) !important;
+}
+.btn-secondary:hover {
+  background: linear-gradient(135deg, #94a3b8, #64748b) !important;
 }
 
-@keyframes slideIn {
-  from { opacity: 0; transform: translateY(-14px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-.correct {
-  background: linear-gradient(135deg, #ecfdf5, #d1fae5);
-  color: #065f46;
-  border-left: 6px solid #10b981;
-}
-.correct::before { content: "🎉"; }
-
-.wrong {
-  background: linear-gradient(135deg, #fef2f2, #fee2e2);
-  color: #991b1b;
-  border-left: 6px solid #ef4444;
-}
-.wrong::before { content: "📖"; }
-
-/* ===== PROGRESS BAR ===== */
+/* ===== PROGRESS ===== */
 .progress {
   height: 14px;
   background: #fee2e2;
@@ -409,9 +443,7 @@ button:active { transform: translateY(-1px); }
   margin: 20px 0;
   overflow: hidden;
   box-shadow: inset 0 2px 5px rgba(0,0,0,0.1);
-  position: relative;
 }
-
 #bar {
   height: 100%;
   width: 0;
@@ -419,21 +451,7 @@ button:active { transform: translateY(-1px); }
   border-radius: 20px;
   transition: width 0.6s cubic-bezier(0.16, 1, 0.3, 1);
   box-shadow: 0 0 14px rgba(245, 158, 11, 0.6);
-  position: relative;
 }
-#bar::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
-  animation: shimmer 1.8s infinite;
-}
-@keyframes shimmer {
-  0% { transform: translateX(-100%); }
-  100% { transform: translateX(100%); }
-}
-
-/* ===== NOMOR SOAL ===== */
 #number {
   font-weight: 700;
   color: #ffffff !important;
@@ -445,46 +463,212 @@ button:active { transform: translateY(-1px); }
   font-size: 12.5px !important;
   box-shadow: 0 4px 12px rgba(220,38,38,0.3);
 }
-
 #title {
   font-family: 'Baloo 2', cursive;
   color: #991b1b;
-  font-size: 21px;
+  font-size: 20px;
   margin: 10px 0;
 }
 
-/* ===== HASIL ===== */
-#result {
+/* ===== GAMBAR SOAL ===== */
+.question-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #fff7ed, #fef2f2);
+  border: 3px solid #fecaca;
+  border-radius: 18px;
+  padding: 18px;
+  margin: 16px 0;
+  min-height: 170px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: inset 0 2px 8px rgba(220,38,38,0.06);
+}
+.question-image svg {
+  width: 100%;
+  max-width: 360px;
+  height: auto;
+  position: relative;
+  z-index: 1;
+  filter: drop-shadow(0 4px 12px rgba(0,0,0,0.1));
+  animation: imgFloat 4s ease-in-out infinite;
+}
+@keyframes imgFloat {
+  0%,100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+
+/* ===== KASUS ===== */
+.case {
+  background: linear-gradient(135deg, #fff7ed 0%, #fef2f2 100%);
+  padding: 22px 20px 20px 20px;
+  border-left: 6px solid #dc2626;
+  border-radius: 16px;
+  margin: 18px 0;
+  line-height: 1.75;
+  font-size: 14.5px;
+  position: relative;
+  box-shadow: 0 4px 14px rgba(220,38,38,0.08);
+}
+.case::before {
+  content: "💭 STUDI KASUS";
+  position: absolute;
+  top: -13px;
+  left: 18px;
+  background: linear-gradient(135deg, #dc2626, #f59e0b);
+  color: white;
+  padding: 4px 14px;
+  border-radius: 10px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  box-shadow: 0 4px 10px rgba(220,38,38,0.3);
+}
+
+/* ===== OPSI JAWABAN ===== */
+.option {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 15px 16px;
+  border: 2px solid #f1e4e4;
+  border-radius: 16px;
+  margin: 10px 0;
+  cursor: pointer;
+  background: #ffffff;
+  transition: all 0.25s ease;
+  font-size: 14px;
+  line-height: 1.55;
+  position: relative;
+}
+.option:hover {
+  background: #fff7f7;
+  border-color: #fca5a5;
+  transform: translateX(5px);
+  box-shadow: 0 6px 16px rgba(220, 38, 38, 0.13);
+}
+.option input {
+  width: 20px; height: 20px;
+  margin: 0; margin-top: 1px;
+  accent-color: #dc2626;
+  flex-shrink: 0;
+  cursor: pointer;
+}
+.option .letter {
+  width: 28px; height: 28px;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #fee2e2, #fecaca);
+  color: #991b1b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 14px;
+  flex-shrink: 0;
+  transition: all 0.25s;
+}
+.option.locked {
+  cursor: default;
+  pointer-events: none;
+  opacity: 0.9;
+}
+.option.correct-answer {
+  background: linear-gradient(135deg, #ecfdf5, #d1fae5) !important;
+  border-color: #10b981 !important;
+  box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.2), 0 6px 18px rgba(16, 185, 129, 0.3) !important;
+  animation: pulseGreen 0.6s ease;
+}
+.option.correct-answer .letter {
+  background: linear-gradient(135deg, #10b981, #059669) !important;
+  color: white !important;
+}
+.option.wrong-answer {
+  background: linear-gradient(135deg, #fef2f2, #fecaca) !important;
+  border-color: #ef4444 !important;
+  animation: shake 0.5s ease;
+}
+.option.wrong-answer .letter {
+  background: linear-gradient(135deg, #ef4444, #b91c1c) !important;
+  color: white !important;
+}
+@keyframes pulseGreen {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.02); }
+  100% { transform: scale(1); }
+}
+@keyframes shake {
+  0%,100% { transform: translateX(0); }
+  20% { transform: translateX(-8px); }
+  40% { transform: translateX(8px); }
+  60% { transform: translateX(-5px); }
+  80% { transform: translateX(5px); }
+}
+
+/* ===== FEEDBACK ===== */
+.feedback {
+  padding: 18px;
+  border-radius: 16px;
+  margin-top: 16px;
+  line-height: 1.7;
+  font-size: 14px;
+  animation: slideIn 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+  padding-left: 56px;
+}
+.feedback::before {
+  position: absolute;
+  left: 16px; top: 16px;
+  font-size: 26px;
+}
+@keyframes slideIn {
+  from { opacity: 0; transform: translateY(-14px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.correct {
+  background: linear-gradient(135deg, #ecfdf5, #d1fae5);
+  color: #065f46;
+  border-left: 6px solid #10b981;
+}
+.correct::before { content: "🎉"; }
+.wrong {
+  background: linear-gradient(135deg, #fef2f2, #fee2e2);
+  color: #991b1b;
+  border-left: 6px solid #ef4444;
+}
+.wrong::before { content: "📖"; }
+
+/* ===== EVALUASI ===== */
+#evaluation {
+  animation: fadeInUp 0.6s ease;
+}
+.eval-header {
   text-align: center;
-  padding: 34px 22px;
+  padding: 30px 20px;
   background:
     radial-gradient(circle at top, rgba(255,255,255,0.6), transparent 60%),
     linear-gradient(135deg, #fef2f2, #fef9e7, #eff6ff);
-  border-radius: 24px;
+  border-radius: 20px;
   border: 3px dashed #fca5a5;
-  animation: fadeInUp 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  margin-bottom: 20px;
   position: relative;
   overflow: hidden;
 }
-
-#result::before {
+.eval-header::before {
   content: "🏆";
   position: absolute;
-  top: 12px;
-  right: 20px;
+  top: 12px; right: 20px;
   font-size: 50px;
   opacity: 0.15;
   transform: rotate(15deg);
 }
-
-#result h2 {
+.eval-header h2 {
   justify-content: center;
   font-size: 26px;
   margin-bottom: 8px;
 }
-#result h2::before { content: "🎉"; font-size: 30px; }
+.eval-header h2::before { content: "📊"; font-size: 30px; }
 
-/* Lingkaran skor */
 .score-circle {
   width: 150px;
   height: 150px;
@@ -498,12 +682,10 @@ button:active { transform: translateY(-1px); }
   box-shadow: 0 10px 30px rgba(220,38,38,0.3);
   animation: popIn 0.8s cubic-bezier(0.16, 1, 0.3, 1);
 }
-
 @keyframes popIn {
   from { transform: scale(0.3); opacity: 0; }
   to { transform: scale(1); opacity: 1; }
 }
-
 .score-circle::after {
   content: "";
   position: absolute;
@@ -512,7 +694,6 @@ button:active { transform: translateY(-1px); }
   border-radius: 50%;
   box-shadow: inset 0 3px 10px rgba(0,0,0,0.08);
 }
-
 #score {
   position: relative;
   z-index: 1;
@@ -525,7 +706,6 @@ button:active { transform: translateY(-1px); }
   background-clip: text;
   line-height: 1;
 }
-
 .score-label {
   font-size: 12px;
   color: #94a3b8;
@@ -533,7 +713,6 @@ button:active { transform: translateY(-1px); }
   letter-spacing: 2px;
   margin-bottom: 12px;
 }
-
 #student {
   color: #64748b;
   font-size: 14px;
@@ -544,7 +723,6 @@ button:active { transform: translateY(-1px); }
   display: inline-block;
   border: 1px solid #fde2e2;
 }
-
 #message {
   font-family: 'Baloo 2', cursive;
   font-size: 23px;
@@ -552,17 +730,336 @@ button:active { transform: translateY(-1px); }
   margin: 16px 0 8px;
 }
 
-#summary {
-  color: #475569;
+/* Predikat */
+.predikat-box {
+  background: white;
+  border: 2px solid #fde2e2;
+  border-radius: 16px;
+  padding: 20px;
+  margin: 18px 0;
+  text-align: center;
+}
+.predikat-label {
+  font-size: 12px;
+  color: #94a3b8;
+  font-weight: 600;
+  letter-spacing: 2px;
+  margin-bottom: 8px;
+}
+.predikat-value {
+  font-family: 'Baloo 2', cursive;
+  font-size: 32px;
+  font-weight: 800;
+  margin-bottom: 6px;
+}
+.predikat-desc {
+  font-size: 13.5px;
+  color: #64748b;
+  line-height: 1.5;
+}
+
+/* Analisis per soal */
+.analysis-box {
+  background: #f8fafc;
+  border: 2px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 20px;
+  margin: 18px 0;
+}
+.analysis-box h3 {
+  font-family: 'Baloo 2', cursive;
+  color: #1e3a8a;
+  font-size: 18px;
+  margin-bottom: 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.analysis-box h3::before { content: "🔍"; font-size: 22px; }
+
+.analysis-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 14px;
+  background: white;
+  border-radius: 10px;
+  margin: 8px 0;
+  font-size: 13px;
+  border-left: 4px solid #cbd5e1;
+  transition: all 0.25s;
+}
+.analysis-item:hover {
+  transform: translateX(4px);
+  box-shadow: 0 3px 10px rgba(0,0,0,0.06);
+}
+.analysis-item.benar {
+  border-left-color: #10b981;
+  background: #f0fdf4;
+}
+.analysis-item.salah {
+  border-left-color: #ef4444;
+  background: #fef2f2;
+}
+.analysis-item .icon {
+  font-size: 18px;
+  flex-shrink: 0;
+}
+.analysis-item .q-num {
+  font-weight: 700;
+  color: #64748b;
+  min-width: 30px;
+  font-size: 12px;
+}
+.analysis-item .q-title {
+  flex: 1;
+  color: #334155;
+  font-weight: 500;
+}
+.analysis-item .q-status {
+  font-weight: 700;
+  font-size: 11px;
+  padding: 3px 10px;
+  border-radius: 20px;
+}
+.analysis-item.benar .q-status {
+  background: #d1fae5;
+  color: #065f46;
+}
+.analysis-item.salah .q-status {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+/* Rekomendasi */
+.rekomendasi-box {
+  background: linear-gradient(135deg, #eff6ff, #dbeafe);
+  border: 2px solid #93c5fd;
+  border-radius: 16px;
+  padding: 20px;
+  margin: 18px 0;
+}
+.rekomendasi-box h3 {
+  font-family: 'Baloo 2', cursive;
+  color: #1e40af;
+  font-size: 18px;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.rekomendasi-box h3::before { content: "💡"; font-size: 22px; }
+.rekomendasi-box p {
   font-size: 14px;
-  line-height: 1.6;
-  max-width: 480px;
-  margin: 0 auto;
+  color: #1e3a8a;
+  line-height: 1.7;
+}
+
+/* ===== PENUTUP ===== */
+#closing {
+  animation: fadeInUp 0.6s ease;
+  text-align: center;
+}
+.closing-hero {
+  background:
+    radial-gradient(circle at top, rgba(255,255,255,0.5), transparent 60%),
+    linear-gradient(135deg, #fef9e7, #fef3c7, #fff7ed);
+  border: 3px solid #fbbf24;
+  border-radius: 24px;
+  padding: 40px 24px;
+  margin-bottom: 20px;
+  position: relative;
+  overflow: hidden;
+}
+.closing-hero::before {
+  content: "🇮🇩";
+  position: absolute;
+  top: -30px; right: -20px;
+  font-size: 180px;
+  opacity: 0.08;
+  transform: rotate(15deg);
+}
+.closing-hero .thank-icon {
+  font-size: 70px;
+  margin-bottom: 10px;
+  animation: float 3s ease-in-out infinite;
+  display: inline-block;
+}
+.closing-hero h2 {
+  justify-content: center;
+  font-size: 28px;
+  margin-bottom: 14px;
+}
+.closing-hero h2::before { content: "🙏"; font-size: 32px; }
+.closing-hero p {
+  font-size: 15px;
+  line-height: 1.8;
+  color: #78350f;
+  max-width: 620px;
+  margin: 0 auto 12px;
+  position: relative;
+  z-index: 1;
+}
+
+.closing-quote {
+  background: linear-gradient(135deg, #fef2f2, #fee2e2);
+  border-left: 6px solid #dc2626;
+  border-radius: 14px;
+  padding: 18px 22px;
+  margin: 20px 0;
+  font-style: italic;
+  color: #7f1d1d;
+  font-size: 14.5px;
+  line-height: 1.7;
+  text-align: left;
+  position: relative;
+}
+.closing-quote::before {
+  content: "❝";
+  font-size: 40px;
+  color: #dc2626;
+  opacity: 0.5;
+  position: absolute;
+  top: 0;
+  left: 10px;
+  font-family: serif;
+}
+.closing-quote::after {
+  content: "— Ir. Soekarno";
+  display: block;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  text-align: right;
+  margin-top: 8px;
+  color: #991b1b;
+}
+
+.aksi-nyata {
+  background: linear-gradient(135deg, #ecfdf5, #d1fae5);
+  border: 2px solid #6ee7b7;
+  border-radius: 16px;
+  padding: 22px;
+  margin: 18px 0;
+  text-align: left;
+}
+.aksi-nyata h3 {
+  font-family: 'Baloo 2', cursive;
+  color: #065f46;
+  font-size: 18px;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.aksi-nyata h3::before { content: "✨"; font-size: 22px; }
+.aksi-nyata ul {
+  list-style: none;
+  padding: 0;
+}
+.aksi-nyata li {
+  padding: 8px 0 8px 32px;
+  font-size: 14px;
+  color: #064e3b;
+  position: relative;
+  line-height: 1.5;
+}
+.aksi-nyata li::before {
+  content: "🌟";
+  position: absolute;
+  left: 0;
+  font-size: 16px;
+}
+
+.pantun-box {
+  background: linear-gradient(135deg, #f0f9ff, #e0f2fe);
+  border: 2px dashed #7dd3fc;
+  border-radius: 16px;
+  padding: 24px;
+  margin: 20px 0;
+  font-size: 14px;
+  line-height: 2;
+  color: #075985;
+  font-style: italic;
+  text-align: center;
+}
+.pantun-box .pantun-title {
+  font-family: 'Baloo 2', cursive;
+  font-size: 16px;
+  font-weight: 700;
+  font-style: normal;
+  color: #0369a1;
+  margin-bottom: 12px;
+}
+
+.btn-group {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 22px;
+}
+.btn-group button {
+  margin-top: 0;
+  flex: 1;
+  min-width: 180px;
+}
+
+/* ===== STOP SCREEN ===== */
+#stopped {
+  text-align: center;
+  padding: 40px 24px;
+  background: linear-gradient(135deg, #7f1d1d, #dc2626);
+  border-radius: 24px;
+  color: white;
+  animation: fadeInUp 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  border: 4px solid #fbbf24;
+  box-shadow: 0 20px 50px rgba(127,29,29,0.5);
+}
+#stopped .stop-icon {
+  font-size: 80px;
+  margin-bottom: 10px;
+  animation: shakeIcon 1s ease infinite;
+}
+@keyframes shakeIcon {
+  0%,100% { transform: rotate(0); }
+  25% { transform: rotate(-10deg); }
+  75% { transform: rotate(10deg); }
+}
+#stopped h2 {
+  color: white;
+  justify-content: center;
+  font-size: 28px;
+  margin-bottom: 12px;
+}
+#stopped h2::before { content: "🚫 "; }
+#stopped p {
+  font-size: 15px;
+  line-height: 1.7;
+  opacity: 0.95;
+  margin-bottom: 10px;
+}
+#stopped .stat {
+  display: inline-block;
+  background: rgba(255,255,255,0.15);
+  padding: 12px 24px;
+  border-radius: 12px;
+  margin: 10px 0;
+  font-size: 14px;
+}
+#stopped .stat strong {
+  font-size: 22px;
+  color: #fbbf24;
+  font-family: 'Baloo 2', cursive;
+}
+#stopped button {
+  background: linear-gradient(135deg, #fbbf24, #f59e0b);
+  color: #7f1d1d;
+  margin-top: 18px;
 }
 
 /* ===== UTILITAS ===== */
 .hidden { display: none !important; }
-
 .small {
   color: #94a3b8;
   font-size: 13px;
@@ -572,11 +1069,87 @@ button:active { transform: translateY(-1px); }
   display: block;
 }
 
+/* ===== BINTANG ===== */
+#star-container {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 9999;
+  overflow: hidden;
+}
+.star {
+  position: absolute;
+  top: -50px;
+  font-size: 32px;
+  animation: starFall linear forwards;
+  filter: drop-shadow(0 2px 6px rgba(245, 158, 11, 0.6));
+}
+@keyframes starFall {
+  0% { transform: translateY(0) rotate(0deg) scale(0.5); opacity: 0; }
+  10% { opacity: 1; transform: translateY(30px) rotate(45deg) scale(1.2); }
+  100% { transform: translateY(105vh) rotate(720deg) scale(0.8); opacity: 0; }
+}
+
+/* ===== OVERLAY TAB ===== */
+#warning-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10000;
+  animation: fadeIn 0.3s ease;
+  backdrop-filter: blur(6px);
+}
+#warning-overlay.hidden { display: none !important; }
+@keyframes fadeIn { from {opacity:0;} to {opacity:1;} }
+
+.warning-box {
+  background: linear-gradient(135deg, #dc2626, #991b1b);
+  color: white;
+  padding: 40px 36px;
+  border-radius: 24px;
+  text-align: center;
+  max-width: 440px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+  border: 4px solid #fbbf24;
+  animation: warningPop 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+@keyframes warningPop {
+  from { transform: scale(0.5); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+.warning-box .icon {
+  font-size: 70px;
+  margin-bottom: 10px;
+  animation: shakeIcon 0.6s ease infinite;
+}
+.warning-box h2 {
+  color: white;
+  justify-content: center;
+  font-size: 24px;
+  margin-bottom: 12px;
+}
+.warning-box h2::before { content: "⚠️ "; }
+.warning-box p {
+  font-size: 15px;
+  line-height: 1.6;
+  opacity: 0.95;
+}
+.warning-box .count {
+  font-size: 40px;
+  font-weight: 800;
+  color: #fbbf24;
+  margin: 12px 0;
+  font-family: 'Baloo 2', cursive;
+}
+
 /* ===== RESPONSIVE ===== */
 @media (max-width: 620px) {
   .container { padding: 18px; border-radius: 22px; }
   header { padding: 30px 16px 26px; }
-  header h1 { font-size: 20px; letter-spacing: 0.5px; }
+  header h1 { font-size: 19px; letter-spacing: 0.5px; }
   header p { font-size: 12px; }
   header .garuda { width: 56px; height: 56px; }
   .sila-strip { gap: 5px; }
@@ -585,16 +1158,34 @@ button:active { transform: translateY(-1px); }
   .score-circle { width: 125px; height: 125px; }
   #message { font-size: 19px; }
   button { width: 100%; }
-  .option { font-size: 13.5px; padding: 14px; }
-  #title { font-size: 18px; }
+  .option { font-size: 13px; padding: 13px; }
+  #title { font-size: 17px; }
+  .btn-group button { width: 100%; }
+  .welcome-hero h2 { font-size: 21px; }
+  .closing-hero h2 { font-size: 22px; }
 }
 </style>
 </head>
 <body>
+
+<div id="star-container"></div>
+
+<!-- Overlay peringatan tab -->
+<div id="warning-overlay" class="hidden">
+  <div class="warning-box">
+    <div class="icon">⚠️</div>
+    <h2>Jangan Tinggalkan Simulasi!</h2>
+    <p>Kamu telah berpindah tab sebanyak:</p>
+    <div class="count" id="tab-count">1</div>
+    <p style="font-size:13px;opacity:0.9;margin-top:14px;">
+      <strong>⚠️ PERINGATAN:</strong> Jika keluar tab <strong>2 kali</strong>, simulasi akan <strong>BERHENTI OTOMATIS</strong>!
+    </p>
+  </div>
+</div>
+
 <div class="container">
 
   <header>
-    <!-- Ilustrasi Garuda -->
     <svg class="garuda" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
       <circle cx="50" cy="50" r="46" fill="#ffffff" opacity="0.15"/>
       <path d="M50 15 L58 32 L78 28 L68 44 L88 52 L70 58 L76 76 L58 68 L50 86 L42 68 L24 76 L30 58 L12 52 L32 44 L22 28 L42 32 Z"
@@ -602,13 +1193,11 @@ button:active { transform: translateY(-1px); }
       <circle cx="50" cy="50" r="10" fill="#991b1b"/>
       <circle cx="50" cy="50" r="5" fill="#fbbf24"/>
     </svg>
-
     <h1>SIMULASI PENDIDIKAN PANCASILA</h1>
     <p>Pancasila dalam Pengalaman Hidup Sehari-hari</p>
-    <span class="tagline">🇮🇩 Belajar Mengambil Keputusan Berdasarkan Nilai Pancasila</span>
+    <span class="tagline">🎓 Kelas XII SMA — 10 Soal Bergambar</span>
   </header>
 
-  <!-- Strip 5 Sila -->
   <div class="sila-strip">
     <div class="sila-badge"><span class="num">1</span>Ketuhanan</div>
     <div class="sila-badge"><span class="num">2</span>Kemanusiaan</div>
@@ -617,8 +1206,60 @@ button:active { transform: translateY(-1px); }
     <div class="sila-badge"><span class="num">5</span>Keadilan</div>
   </div>
 
-  <!-- Bagian Identitas -->
-  <div id="identity">
+  <!-- ================= PEMBUKA ================= -->
+  <div id="welcome">
+    <div class="welcome-hero">
+      <h2>Selamat Datang, Generasi Pancasila!</h2>
+      <p class="greeting">"Pancasila adalah jiwa bangsa Indonesia"</p>
+      <p>
+        Halo, Sobat Pancasila! 👋<br>
+        Selamat datang di <strong>Simulasi Pendidikan Pancasila</strong> untuk siswa kelas XII SMA.
+        Melalui simulasi ini, kamu akan dihadapkan pada berbagai <em>situasi nyata</em> dalam kehidupan
+        sehari-hari dan ditantang untuk mengambil keputusan berdasarkan nilai-nilai Pancasila.
+      </p>
+    </div>
+
+    <div class="welcome-quote">
+      "Jangan sekali-kali meninggalkan sejarah. Bangsa yang besar adalah bangsa yang menghargai
+      jasa para pahlawannya. Pancasila adalah dasar negara yang harus kita amalkan, bukan hanya dihafalkan."
+    </div>
+
+    <div class="tujuan-box">
+      <h3>Tujuan Pembelajaran</h3>
+      <ul>
+        <li>Memahami makna dan nilai-nilai yang terkandung dalam kelima sila Pancasila</li>
+        <li>Mampu menganalisis situasi nyata dan mengaitkannya dengan nilai Pancasila</li>
+        <li>Membiasakan sikap dan perilaku yang mencerminkan pengamalan Pancasila</li>
+        <li>Mengembangkan karakter Pancasila dalam kehidupan bermasyarakat</li>
+      </ul>
+    </div>
+
+    <div class="petunjuk-box">
+      <h3>Petunjuk Pengerjaan</h3>
+      <ol>
+        <li>Isi <strong>nama lengkap</strong> dan <strong>kelas</strong> pada halaman berikutnya.</li>
+        <li>Terdapat <strong>10 soal</strong> berupa studi kasus dengan gambar ilustrasi.</li>
+        <li><strong>Klik salah satu jawaban</strong> — jawaban benar akan langsung muncul.</li>
+        <li>Jika jawaban <strong>benar</strong>: muncul suara ceria + ⭐ bintang berjatuhan.</li>
+        <li>Jika jawaban <strong>salah</strong>: muncul suara peringatan + pembahasan.</li>
+        <li>Setiap soal bernilai <strong>10 poin</strong>, total maksimal <strong>100</strong>.</li>
+        <li>Di akhir akan muncul <strong>evaluasi lengkap</strong> dan rekomendasi belajar.</li>
+      </ol>
+    </div>
+
+    <div class="warning-note">
+      <div>
+        <strong>PERHATIAN!</strong> Jangan berpindah tab selama simulasi berlangsung.<br>
+        • Keluar tab <strong>1 kali</strong> → muncul peringatan + suara<br>
+        • Keluar tab <strong>2 kali</strong> → <strong style="color:#dc2626;">SIMULASI BERHENTI OTOMATIS</strong>
+      </div>
+    </div>
+
+    <button onclick="goToIdentity()">Mulai Simulasi</button>
+  </div>
+
+  <!-- ================= IDENTITAS ================= -->
+  <div id="identity" class="hidden">
     <h2>Identitas Peserta Didik</h2>
     <label>Nama Lengkap</label>
     <div class="input-wrapper nama">
@@ -626,117 +1267,568 @@ button:active { transform: translateY(-1px); }
     </div>
     <label>Kelas</label>
     <div class="input-wrapper kelas">
-      <input id="kelas" placeholder="Contoh: XII">
+      <input id="kelas" placeholder="Contoh: XII IPA 1" value="XII">
     </div>
-    <p class="small">📌 Bacalah setiap situasi dan pilih tindakan yang paling tepat.</p>
-    <button onclick="start()">Mulai Simulasi</button>
+    <p class="small">📌 Pastikan nama dan kelas sudah benar sebelum memulai.</p>
+    <div class="btn-group">
+      <button class="btn-secondary" onclick="backToWelcome()">⬅ Kembali</button>
+      <button onclick="start()">Mulai Simulasi</button>
+    </div>
   </div>
 
-  <!-- Bagian Kuis -->
+  <!-- ================= KUIS ================= -->
   <div id="quiz" class="hidden">
     <div class="progress"><div id="bar"></div></div>
     <p id="number" class="small"></p>
     <h2 id="title"></h2>
+    <div class="question-image" id="imageBox"></div>
     <div class="case" id="scenario"></div>
     <div id="options"></div>
     <div id="feedback" class="feedback hidden"></div>
-    <button id="check" onclick="checkAnswer()">Periksa Jawaban</button>
     <button id="next" class="hidden" onclick="nextQuestion()">Soal Berikutnya</button>
   </div>
 
-  <!-- Bagian Hasil -->
-  <div id="result" class="hidden">
-    <h2>Hasil Simulasi</h2>
-    <p class="score-label">NILAI AKHIR</p>
-    <div class="score-circle" id="circle">
-      <span id="score">0</span>
+  <!-- ================= EVALUASI ================= -->
+  <div id="evaluation" class="hidden">
+    <div class="eval-header">
+      <h2>Evaluasi Hasil Simulasi</h2>
+      <p class="score-label">NILAI AKHIR</p>
+      <div class="score-circle" id="circle">
+        <span id="score">0</span>
+      </div>
+      <p id="student"></p>
+      <h3 id="message"></h3>
     </div>
-    <p id="student"></p>
-    <h3 id="message"></h3>
-    <p id="summary"></p>
-    <button onclick="restart()">Ulangi Simulasi</button>
+
+    <div class="predikat-box">
+      <p class="predikat-label">PREDIKAT</p>
+      <div class="predikat-value" id="predikat">-</div>
+      <p class="predikat-desc" id="predikat-desc">-</p>
+    </div>
+
+    <div class="analysis-box">
+      <h3>Analisis Jawaban per Soal</h3>
+      <div id="analysis-list"></div>
+    </div>
+
+    <div class="rekomendasi-box">
+      <h3>Rekomendasi untuk Kamu</h3>
+      <p id="rekomendasi"></p>
+    </div>
+
+    <div class="btn-group">
+      <button class="btn-secondary" onclick="restart()">🔄 Ulangi Simulasi</button>
+      <button class="btn-green" onclick="goToClosing()">Lanjut ke Penutup ➜</button>
+    </div>
+  </div>
+
+  <!-- ================= PENUTUP ================= -->
+  <div id="closing" class="hidden">
+    <div class="closing-hero">
+      <div class="thank-icon">🙏</div>
+      <h2>Terima Kasih!</h2>
+      <p>
+        Kamu telah menyelesaikan <strong>Simulasi Pendidikan Pancasila</strong> dengan baik.
+        Semoga nilai-nilai Pancasila yang telah kamu pelajari tidak berhenti di sini,
+        tetapi <strong>terus hidup dalam setiap tindakanmu</strong> sehari-hari.
+      </p>
+    </div>
+
+    <div class="closing-quote">
+      "Pancasila bukan sekadar hafalan, tetapi harus menjadi napas dalam setiap langkah hidup kita.
+      Bangsa yang besar adalah bangsa yang mengamalkan nilai-nilai luhurnya."
+    </div>
+
+    <div class="aksi-nyata">
+      <h3>Aksi Nyata yang Bisa Kamu Lakukan</h3>
+      <ul>
+        <li>Menghormati teman yang berbeda agama dan keyakinan</li>
+        <li>Membantu sesama yang membutuhkan tanpa membeda-bedakan</li>
+        <li>Menjaga persatuan di tengah keberagaman budaya</li>
+        <li>Menyelesaikan masalah dengan musyawarah, bukan kekerasan</li>
+        <li>Bersikap adil dan tidak memihak dalam setiap keputusan</li>
+        <li>Bijak menggunakan media sosial, tidak menyebar hoaks</li>
+      </ul>
+    </div>
+
+    <div class="pantun-box">
+      <div class="pantun-title">🌺 Pantun Penutup 🌺</div>
+      Pergi ke pasar membeli talas,<br>
+      Talas dimakan bersama kawan.<br>
+      Pancasila adalah alas,<br>
+      Negara kuat rakyat pun aman.<br><br>
+      <em>Sekian dari kami, terima kasih! 🇮🇩</em>
+    </div>
+
+    <div class="btn-group">
+      <button class="btn-secondary" onclick="restart()">🔄 Ulangi dari Awal</button>
+      <button onclick="backToWelcome()">🏠 Kembali ke Beranda</button>
+    </div>
+  </div>
+
+  <!-- ================= STOP SCREEN ================= -->
+  <div id="stopped" class="hidden">
+    <div class="stop-icon">🚫</div>
+    <h2>SIMULASI DIHENTIKAN</h2>
+    <p>Kamu telah keluar dari tab sebanyak <strong>2 kali</strong>.</p>
+    <p>Simulasi berhenti otomatis karena Anda tidak fokus mengerjakan.</p>
+    <div class="stat">
+      Skor sementara: <strong id="stop-score">0</strong> / 100<br>
+      Soal terjawab: <strong id="stop-answered">0</strong> / 10
+    </div>
+    <button onclick="restart()">Coba Lagi</button>
   </div>
 
 </div>
 
 <script>
+/* ================================================================
+   GAMBAR SVG UNTUK SETIAP SOAL
+   ================================================================ */
+const images = {
+  sila1: `<svg viewBox="0 0 400 200" xmlns="http://www.w3.org/2000/svg">
+    <rect x="60" y="120" width="70" height="70" fill="#dbeafe" stroke="#2563eb" stroke-width="2" rx="4"/>
+    <polygon points="95,80 120,120 70,120" fill="#f59e0b" stroke="#b45309" stroke-width="2"/>
+    <circle cx="95" cy="75" r="8" fill="#fbbf24" stroke="#b45309" stroke-width="2"/>
+    <rect x="165" y="90" width="70" height="100" fill="#ecfdf5" stroke="#10b981" stroke-width="2" rx="4"/>
+    <path d="M200,65 L200,90 M185,78 L215,78" stroke="#10b981" stroke-width="4" stroke-linecap="round"/>
+    <circle cx="200" cy="68" r="6" fill="#34d399"/>
+    <rect x="270" y="100" width="70" height="90" fill="#fef3c7" stroke="#d97706" stroke-width="2" rx="4"/>
+    <polygon points="305,75 285,100 325,100" fill="#ef4444" stroke="#991b1b" stroke-width="2"/>
+    <circle cx="305" cy="70" r="7" fill="#fbbf24" stroke="#b45309" stroke-width="2"/>
+    <text x="200" y="55" text-anchor="middle" font-size="14" font-weight="bold" fill="#991b1b">🕌  ✝️  🛕</text>
+  </svg>`,
+  sila2: `<svg viewBox="0 0 400 200" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="130" cy="80" r="22" fill="#fbbf24" stroke="#b45309" stroke-width="2"/>
+    <circle cx="270" cy="80" r="22" fill="#fbbf24" stroke="#b45309" stroke-width="2"/>
+    <rect x="108" y="105" width="44" height="60" rx="8" fill="#3b82f6"/>
+    <rect x="248" y="105" width="44" height="60" rx="8" fill="#3b82f6"/>
+    <path d="M170,130 Q200,100 230,130" stroke="#dc2626" stroke-width="6" fill="none" stroke-linecap="round"/>
+    <path d="M200,120 L215,135 L200,150 L185,135 Z" fill="#dc2626"/>
+    <text x="200" y="185" text-anchor="middle" font-size="13" fill="#991b1b" font-weight="bold">Saling Membantu</text>
+  </svg>`,
+  sila3: `<svg viewBox="0 0 400 200" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="100" cy="70" r="20" fill="#fbbf24" stroke="#b45309" stroke-width="2"/>
+    <circle cx="200" cy="55" r="20" fill="#fbbf24" stroke="#b45309" stroke-width="2"/>
+    <circle cx="300" cy="70" r="20" fill="#fbbf24" stroke="#b45309" stroke-width="2"/>
+    <rect x="80" y="92" width="40" height="50" rx="6" fill="#ef4444"/>
+    <rect x="180" y="77" width="40" height="65" rx="6" fill="#10b981"/>
+    <rect x="280" y="92" width="40" height="50" rx="6" fill="#3b82f6"/>
+    <path d="M120,140 Q200,170 280,140" stroke="#f59e0b" stroke-width="4" fill="none" stroke-dasharray="6,4"/>
+    <text x="200" y="190" text-anchor="middle" font-size="13" fill="#991b1b" font-weight="bold">Bhinneka Tunggal Ika</text>
+  </svg>`,
+  sila4: `<svg viewBox="0 0 400 200" xmlns="http://www.w3.org/2000/svg">
+    <ellipse cx="200" cy="130" rx="140" ry="45" fill="#fef3c7" stroke="#d97706" stroke-width="2"/>
+    <circle cx="120" cy="100" r="18" fill="#fbbf24" stroke="#b45309" stroke-width="2"/>
+    <circle cx="200" cy="90" r="18" fill="#fbbf24" stroke="#b45309" stroke-width="2"/>
+    <circle cx="280" cy="100" r="18" fill="#fbbf24" stroke="#b45309" stroke-width="2"/>
+    <rect x="105" y="118" width="30" height="35" rx="5" fill="#ef4444"/>
+    <rect x="185" y="108" width="30" height="45" rx="5" fill="#10b981"/>
+    <rect x="265" y="118" width="30" height="35" rx="5" fill="#3b82f6"/>
+    <text x="200" y="40" text-anchor="middle" font-size="28">🗣️</text>
+    <text x="200" y="75" text-anchor="middle" font-size="13" fill="#991b1b" font-weight="bold">Musyawarah Mufakat</text>
+  </svg>`,
+  sila5: `<svg viewBox="0 0 400 200" xmlns="http://www.w3.org/2000/svg">
+    <line x1="200" y1="40" x2="200" y2="160" stroke="#b45309" stroke-width="6" stroke-linecap="round"/>
+    <line x1="100" y1="70" x2="300" y2="70" stroke="#b45309" stroke-width="5" stroke-linecap="round"/>
+    <polygon points="200,30 215,50 185,50" fill="#fbbf24" stroke="#b45309" stroke-width="2"/>
+    <line x1="100" y1="70" x2="100" y2="100" stroke="#b45309" stroke-width="2"/>
+    <line x1="300" y1="70" x2="300" y2="100" stroke="#b45309" stroke-width="2"/>
+    <ellipse cx="100" cy="110" rx="30" ry="12" fill="#ef4444" stroke="#991b1b" stroke-width="2"/>
+    <ellipse cx="300" cy="110" rx="30" ry="12" fill="#10b981" stroke="#059669" stroke-width="2"/>
+    <rect x="160" y="155" width="80" height="12" rx="3" fill="#b45309"/>
+    <text x="200" y="190" text-anchor="middle" font-size="13" fill="#991b1b" font-weight="bold">Keadilan Sosial</text>
+  </svg>`,
+  gotong: `<svg viewBox="0 0 400 200" xmlns="http://www.w3.org/2000/svg">
+    <rect x="60" y="120" width="80" height="50" fill="#dbeafe" stroke="#2563eb" stroke-width="2" rx="4"/>
+    <rect x="150" y="100" width="80" height="70" fill="#ecfdf5" stroke="#10b981" stroke-width="2" rx="4"/>
+    <rect x="240" y="120" width="80" height="50" fill="#fef3c7" stroke="#d97706" stroke-width="2" rx="4"/>
+    <circle cx="100" cy="70" r="16" fill="#fbbf24" stroke="#b45309" stroke-width="2"/>
+    <circle cx="190" cy="55" r="16" fill="#fbbf24" stroke="#b45309" stroke-width="2"/>
+    <circle cx="280" cy="70" r="16" fill="#fbbf24" stroke="#b45309" stroke-width="2"/>
+    <path d="M100,86 L100,115 M190,71 L190,95 M280,86 L280,115" stroke="#b45309" stroke-width="3"/>
+    <text x="200" y="190" text-anchor="middle" font-size="13" fill="#991b1b" font-weight="bold">Gotong Royong</text>
+  </svg>`,
+  medsos: `<svg viewBox="0 0 400 200" xmlns="http://www.w3.org/2000/svg">
+    <rect x="80" y="30" width="240" height="140" rx="14" fill="#dbeafe" stroke="#2563eb" stroke-width="3"/>
+    <rect x="95" y="45" width="210" height="20" rx="4" fill="#3b82f6"/>
+    <circle cx="105" cy="55" r="4" fill="#ef4444"/>
+    <circle cx="120" cy="55" r="4" fill="#fbbf24"/>
+    <circle cx="135" cy="55" r="4" fill="#10b981"/>
+    <rect x="100" y="80" width="80" height="70" rx="6" fill="#fef3c7" stroke="#d97706" stroke-width="2"/>
+    <text x="140" y="120" text-anchor="middle" font-size="24">⚠️</text>
+    <text x="140" y="145" text-anchor="middle" font-size="9" fill="#991b1b" font-weight="bold">HOAKS</text>
+    <rect x="195" y="85" width="105" height="10" rx="3" fill="#94a3b8"/>
+    <rect x="195" y="102" width="85" height="10" rx="3" fill="#94a3b8"/>
+    <rect x="195" y="119" width="95" height="10" rx="3" fill="#94a3b8"/>
+    <rect x="195" y="136" width="70" height="10" rx="3" fill="#94a3b8"/>
+  </svg>`,
+  integritas: `<svg viewBox="0 0 400 200" xmlns="http://www.w3.org/2000/svg">
+    <rect x="120" y="40" width="160" height="120" rx="12" fill="#fef3c7" stroke="#d97706" stroke-width="3"/>
+    <text x="200" y="80" text-anchor="middle" font-size="13" font-weight="bold" fill="#991b1b">INTEGRITAS</text>
+    <line x1="140" y1="95" x2="260" y2="95" stroke="#d97706" stroke-width="2"/>
+    <circle cx="170" cy="125" r="12" fill="#10b981"/>
+    <path d="M164,125 L169,130 L177,120" stroke="white" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <circle cx="230" cy="125" r="12" fill="#ef4444"/>
+    <path d="M224,119 L236,131 M236,119 L224,131" stroke="white" stroke-width="3" stroke-linecap="round"/>
+  </svg>`,
+  demokrasi: `<svg viewBox="0 0 400 200" xmlns="http://www.w3.org/2000/svg">
+    <rect x="80" y="110" width="60" height="70" fill="#dbeafe" stroke="#2563eb" stroke-width="2" rx="4"/>
+    <rect x="170" y="110" width="60" height="70" fill="#ecfdf5" stroke="#10b981" stroke-width="2" rx="4"/>
+    <rect x="260" y="110" width="60" height="70" fill="#fef3c7" stroke="#d97706" stroke-width="2" rx="4"/>
+    <path d="M100,80 L130,120 M100,120 L130,80" stroke="#3b82f6" stroke-width="3"/>
+    <path d="M190,80 L220,120 M190,120 L220,80" stroke="#10b981" stroke-width="3"/>
+    <path d="M280,80 L310,120 M280,120 L310,80" stroke="#d97706" stroke-width="3"/>
+    <path d="M110,60 Q200,20 290,60" stroke="#dc2626" stroke-width="3" fill="none" stroke-dasharray="5,3"/>
+    <text x="200" y="52" text-anchor="middle" font-size="20">🗳️</text>
+  </svg>`,
+  lingkungan: `<svg viewBox="0 0 400 200" xmlns="http://www.w3.org/2000/svg">
+    <rect x="80" y="120" width="240" height="60" fill="#d1fae5" rx="6"/>
+    <circle cx="150" cy="100" r="30" fill="#10b981"/>
+    <rect x="145" y="120" width="10" height="40" fill="#78350f"/>
+    <circle cx="250" cy="105" r="25" fill="#34d399"/>
+    <rect x="245" y="120" width="10" height="40" fill="#78350f"/>
+    <circle cx="320" cy="110" r="20" fill="#6ee7b7"/>
+    <rect x="315" y="125" width="10" height="35" fill="#78350f"/>
+    <text x="200" y="45" text-anchor="middle" font-size="28">🌳</text>
+    <text x="200" y="190" text-anchor="middle" font-size="13" fill="#991b1b" font-weight="bold">Lingkungan & Keadilan Sosial</text>
+  </svg>`
+};
+
+/* ================================================================
+   10 SOAL KELAS XII
+   ================================================================ */
 const questions = [
   {
-    title: "Situasi 1 – Menghargai Perbedaan Agama",
-    scenario: "Di kelas, terdapat seorang teman yang sedang menjalankan ibadah sesuai agamanya. Beberapa teman mengajaknya bermain dan mengganggu waktu ibadahnya. Apa tindakan yang paling tepat kamu lakukan?",
+    title: "Soal 1 – Toleransi Beragama",
+    image: "sila1",
+    scenario: "Di lingkungan sekolahmu, terdapat siswa dari berbagai agama. Saat jam istirahat, seorang teman Muslim sedang salat di musala sekolah. Beberapa siswa lain berisik di dekat musala. Sebagai ketua kelas, apa tindakan paling tepat?",
     options: [
-      "Membiarkannya karena bukan urusan kita.",
-      "Menghormati waktu ibadahnya dan mengajak teman lain menjaga ketenangan.",
-      "Mengajaknya bermain karena semua teman harus diperlakukan sama.",
-      "Menertawakannya karena memiliki kebiasaan berbeda."
+      "Membiarkan saja karena bukan tanggung jawab ketua kelas.",
+      "Menegur teman-teman agar tenang dan menghormati yang sedang beribadah.",
+      "Ikut berisik agar dianggap akrab dengan teman.",
+      "Meminta teman yang salat untuk pindah ke tempat lain."
     ],
     answer: 1,
-    explanation: "Menghormati teman yang sedang beribadah merupakan penerapan sila pertama, Ketuhanan Yang Maha Esa."
+    explanation: "Menghormati waktu ibadah orang lain adalah wujud sila ke-1, Ketuhanan Yang Maha Esa. Sebagai ketua kelas, menegur dengan santun adalah sikap yang tepat."
   },
   {
-    title: "Situasi 2 – Kepedulian terhadap Sesama",
-    scenario: "Seorang teman tidak memiliki perlengkapan sekolah yang lengkap karena kondisi ekonomi keluarganya. Beberapa siswa justru mengejeknya. Bagaimana sikap yang seharusnya kamu lakukan?",
+    title: "Soal 2 – Kepedulian Sosial",
+    image: "sila2",
+    scenario: "Kamu melihat teman sekelas yang selalu membawa bekal seadanya karena kondisi ekonomi keluarga. Beberapa siswa mengucilkannya. Sikap kamu sebaiknya...",
     options: [
-      "Ikut mengejek agar dianggap bagian dari kelompok.",
-      "Menjauhinya agar tidak ikut menjadi bahan ejekan.",
-      "Membela dan membantu teman tersebut tanpa merendahkan martabatnya.",
-      "Menyuruhnya berhenti sekolah."
+      "Ikut mengucilkan agar tidak dijauhi kelompok populer.",
+      "Membiarkan karena bukan urusanmu.",
+      "Mendekati, berteman, dan membantunya tanpa membuatnya merasa rendah.",
+      "Menyarankan dia pindah sekolah."
     ],
     answer: 2,
-    explanation: "Menghargai martabat manusia dan membantu sesama merupakan pengamalan sila kedua, Kemanusiaan yang Adil dan Beradab."
+    explanation: "Membantu sesama tanpa merendahkan martabatnya adalah pengamalan sila ke-2, Kemanusiaan yang Adil dan Beradab."
   },
   {
-    title: "Situasi 3 – Mengutamakan Musyawarah",
-    scenario: "Dalam pemilihan ketua kelas, terdapat dua calon yang memiliki pendukung masing-masing. Kedua kelompok mulai saling menyalahkan. Apa solusi yang paling sesuai dengan Pancasila?",
+    title: "Soal 3 – Persatuan dalam Keberagaman",
+    image: "sila3",
+    scenario: "Di kelasmu ada siswa dari berbagai suku: Jawa, Batak, Minang, Bugis, dan Papua. Saat pembagian kelompok tugas, ada yang menolak berkelompok dengan suku tertentu. Bagaimana sikapmu?",
     options: [
-      "Memaksakan calon yang paling banyak memiliki teman.",
-      "Membatalkan pemilihan tanpa kesepakatan.",
-      "Membiarkan konflik sampai salah satu kelompok menyerah.",
-      "Melakukan musyawarah dan menghargai hasil keputusan bersama."
+      "Membiarkan karena itu hak masing-masing.",
+      "Mendukung pemisahan agar kelompok lebih nyaman.",
+      "Mengingatkan bahwa semua suku setara dan mengajak bekerja sama.",
+      "Melaporkan ke guru agar mereka dihukum."
     ],
-    answer: 3,
-    explanation: "Musyawarah untuk mencapai keputusan bersama merupakan penerapan sila keempat, Kerakyatan yang Dipimpin oleh Hikmat Kebijaksanaan dalam Permusyawaratan/Perwakilan."
+    answer: 2,
+    explanation: "Sikap menjaga persatuan dan menghargai keberagaman mencerminkan sila ke-3, Persatuan Indonesia. Bhinneka Tunggal Ika adalah semboyan bangsa."
   },
   {
-    title: "Situasi 4 – Keadilan dalam Kelompok",
-    scenario: "Saat mengerjakan tugas kelompok, seorang siswa mengerjakan hampir seluruh pekerjaan, sedangkan anggota lainnya hanya ingin mendapatkan nilai. Apa tindakan terbaik?",
+    title: "Soal 4 – Musyawarah",
+    image: "sila4",
+    scenario: "Kelasmu akan menentukan tujuan study tour. Ada 3 pilihan: Bali, Yogyakarta, dan Lombok. Pendukung masing-masing tetap pada pilihannya. Apa langkah terbaik?",
     options: [
-      "Membagi tugas secara adil sesuai kemampuan dan tanggung jawab setiap anggota.",
-      "Membiarkan satu orang menyelesaikan semua pekerjaan.",
-      "Mengeluarkan anggota yang tidak aktif tanpa berdiskusi.",
-      "Memberikan nilai yang sama tanpa memperhatikan kontribusi."
+      "Memilih yang paling banyak pendukungnya tanpa diskusi.",
+      "Melakukan musyawarah, mendengar semua pendapat, lalu voting secara adil.",
+      "Membatalkan study tour karena tidak ada kesepakatan.",
+      "Memilih sesuai keinginan ketua kelas."
+    ],
+    answer: 1,
+    explanation: "Musyawarah mufakat dengan menghargai semua pendapat adalah wujud sila ke-4, Kerakyatan yang Dipimpin oleh Hikmat Kebijaksanaan dalam Permusyawaratan/Perwakilan."
+  },
+  {
+    title: "Soal 5 – Keadilan Sosial",
+    image: "sila5",
+    scenario: "Saat pembagian beasiswa prestasi, kamu mengetahui bahwa penerima beasiswa adalah anak dari guru di sekolahmu, padahal nilai teman lain lebih tinggi. Apa yang sebaiknya kamu lakukan?",
+    options: [
+      "Diam saja karena takut dimusuhi guru.",
+      "Menyebarkan rumor di media sosial.",
+      "Melaporkan ke pihak berwenang dengan bukti yang jelas dan melalui jalur yang benar.",
+      "Ikut mengajukan beasiswa dengan cara yang sama."
+    ],
+    answer: 2,
+    explanation: "Memperjuangkan keadilan melalui jalur yang benar mencerminkan sila ke-5, Keadilan Sosial bagi Seluruh Rakyat Indonesia."
+  },
+  {
+    title: "Soal 6 – Gotong Royong",
+    image: "gotong",
+    scenario: "Kampungmu akan mengadakan kerja bakti membersihkan sungai yang tersumbat sampah. Banyak warga sibuk dengan alasannya masing-masing. Sebagai pemuda, kamu sebaiknya...",
+    options: [
+      "Ikut kerja bakti dan mengajak pemuda lain untuk berpartisipasi.",
+      "Menunggu warga lain bergerak dulu.",
+      "Menyewa orang untuk membersihkan sungai.",
+      "Tidak ikut karena bukan tanggung jawabmu."
     ],
     answer: 0,
-    explanation: "Pembagian tugas secara adil dan tanggung jawab bersama mencerminkan sila kelima, Keadilan Sosial bagi Seluruh Rakyat Indonesia."
+    explanation: "Gotong royong adalah nilai luhur bangsa dan pengamalan sila ke-3 serta ke-5. Mengajak orang lain berpartisipasi memperkuat persatuan."
   },
   {
-    title: "Situasi 5 – Menjaga Persatuan",
-    scenario: "Di media sosial, kamu menemukan unggahan yang menghina budaya suatu daerah. Unggahan tersebut memicu pertengkaran antarsiswa yang berasal dari suku berbeda. Apa yang sebaiknya dilakukan?",
+    title: "Soal 7 – Bijak Bermedia Sosial",
+    image: "medsos",
+    scenario: "Kamu menerima pesan berantai di WhatsApp yang menyebutkan bahwa suatu produk bisa menyembuhkan penyakit dengan cepat, tanpa sumber jelas. Apa yang sebaiknya kamu lakukan?",
     options: [
-      "Membagikan unggahan tersebut agar semakin banyak yang mengetahui.",
-      "Membalas hinaan dengan menghina budaya lain.",
-      "Tidak ikut menyebarkan, mengingatkan teman untuk menghargai keberagaman, dan mengajak berdamai.",
-      "Mendukung kelompok suku sendiri tanpa mempertimbangkan kebenaran."
+      "Langsung membagikan ke semua kontak karena penting.",
+      "Memeriksa kebenaran informasi ke sumber terpercaya sebelum bertindak.",
+      "Membagikan jika banyak yang sudah share.",
+      "Mengabaikan tanpa peduli."
+    ],
+    answer: 1,
+    explanation: "Memeriksa kebenaran informasi sebelum menyebarkan mencerminkan sikap bijak dan bertanggung jawab, sesuai nilai Pancasila dalam era digital."
+  },
+  {
+    title: "Soal 8 – Integritas & Anti-Korupsi",
+    image: "integritas",
+    scenario: "Kamu adalah bendahara kelas. Uang kas kelas tersisa lebih, dan seorang teman mengusulkan untuk memakainya membeli makanan untuk sebagian siswa saja. Sikapmu sebaiknya...",
+    options: [
+      "Setuju agar teman-teman senang.",
+      "Memakai uang untuk keperluan pribadi secara diam-diam.",
+      "Mengajak musyawarah kelas dan menggunakan uang untuk kepentingan bersama secara transparan.",
+      "Menyimpan uang tanpa memberitahu siapa pun."
     ],
     answer: 2,
-    explanation: "Menjaga persaudaraan dan menghargai keberagaman merupakan penerapan sila ketiga, Persatuan Indonesia."
+    explanation: "Transparansi dan penggunaan uang bersama secara adil adalah wujud integritas dan penerapan sila ke-5 serta nilai anti-korupsi."
+  },
+  {
+    title: "Soal 9 – Demokrasi & Partisipasi",
+    image: "demokrasi",
+    scenario: "Di sekolahmu akan diadakan pemilihan ketua OSIS. Kamu mengenal calon yang populer tetapi kurang berprestasi, dan calon lain yang berprestasi tetapi kurang dikenal. Sikapmu sebagai pemilih?",
+    options: [
+      "Memilih calon populer karena lebih banyak teman.",
+      "Memilih calon berprestasi karena visi-misinya jelas dan berkualitas.",
+      "Golput karena tidak yakin.",
+      "Memilih berdasarkan siapa yang memberi hadiah."
+    ],
+    answer: 1,
+    explanation: "Menentukan pilihan berdasarkan kualitas dan visi-misi mencerminkan pendidikan demokrasi yang sehat serta penerapan sila ke-4."
+  },
+  {
+    title: "Soal 10 – Lingkungan & Keadilan Sosial",
+    image: "lingkungan",
+    scenario: "Di dekat sekolahmu, sebuah perusahaan membuang limbah ke sungai sehingga warga sekitar kesulitan air bersih. Sebagai pelajar, apa yang dapat kamu lakukan?",
+    options: [
+      "Diam saja karena bukan urusan pelajar.",
+      "Mengajak teman-teman melakukan aksi protes yang anarkis.",
+      "Melaporkan ke pihak berwenang dan mengajak warga menjaga lingkungan melalui edukasi.",
+      "Pura-pura tidak tahu agar tidak repot."
+    ],
+    answer: 2,
+    explanation: "Memperjuangkan hak masyarakat atas lingkungan bersih melalui jalur yang benar adalah wujud sila ke-5 dan kepedulian terhadap sesama."
   }
 ];
 
+/* ================================================================
+   STATE
+   ================================================================ */
 let current = 0;
 let score = 0;
 let answered = false;
+let answeredCount = 0;
+let simulationActive = false;
+let userAnswers = [];  // menyimpan jawaban user per soal
 
+/* ================================================================
+   AUDIO
+   ================================================================ */
+let audioCtx = null;
+function getAudioCtx() {
+  if (!audioCtx) {
+    try { audioCtx = new (window.AudioContext || window.webkitAudioContext)(); }
+    catch (e) { console.warn("Audio tidak didukung"); }
+  }
+  return audioCtx;
+}
+function playCorrectSound() {
+  const ctx = getAudioCtx(); if (!ctx) return;
+  if (ctx.state === 'suspended') ctx.resume();
+  const notes = [523.25, 659.25, 783.99, 1046.50];
+  const now = ctx.currentTime;
+  notes.forEach((freq, i) => {
+    const osc = ctx.createOscillator(); const gain = ctx.createGain();
+    osc.type = 'sine';
+    osc.frequency.setValueAtTime(freq, now + i * 0.1);
+    gain.gain.setValueAtTime(0, now + i * 0.1);
+    gain.gain.linearRampToValueAtTime(0.3, now + i * 0.1 + 0.02);
+    gain.gain.exponentialRampToValueAtTime(0.001, now + i * 0.1 + 0.25);
+    osc.connect(gain); gain.connect(ctx.destination);
+    osc.start(now + i * 0.1); osc.stop(now + i * 0.1 + 0.3);
+  });
+}
+function playWrongSound() {
+  const ctx = getAudioCtx(); if (!ctx) return;
+  if (ctx.state === 'suspended') ctx.resume();
+  const now = ctx.currentTime;
+  const osc = ctx.createOscillator(); const gain = ctx.createGain();
+  osc.type = 'sawtooth';
+  osc.frequency.setValueAtTime(400, now);
+  osc.frequency.exponentialRampToValueAtTime(150, now + 0.4);
+  gain.gain.setValueAtTime(0, now);
+  gain.gain.linearRampToValueAtTime(0.2, now + 0.02);
+  gain.gain.exponentialRampToValueAtTime(0.001, now + 0.45);
+  osc.connect(gain); gain.connect(ctx.destination);
+  osc.start(now); osc.stop(now + 0.5);
+  const osc2 = ctx.createOscillator(); const gain2 = ctx.createGain();
+  osc2.type = 'sawtooth';
+  osc2.frequency.setValueAtTime(250, now + 0.5);
+  osc2.frequency.exponentialRampToValueAtTime(100, now + 0.85);
+  gain2.gain.setValueAtTime(0, now + 0.5);
+  gain2.gain.linearRampToValueAtTime(0.2, now + 0.52);
+  gain2.gain.exponentialRampToValueAtTime(0.001, now + 0.9);
+  osc2.connect(gain2); gain2.connect(ctx.destination);
+  osc2.start(now + 0.5); osc2.stop(now + 0.95);
+}
+function playWarningSound() {
+  const ctx = getAudioCtx(); if (!ctx) return;
+  if (ctx.state === 'suspended') ctx.resume();
+  const now = ctx.currentTime;
+  [880, 660, 880, 660].forEach((freq, i) => {
+    const osc = ctx.createOscillator(); const gain = ctx.createGain();
+    osc.type = 'square';
+    osc.frequency.setValueAtTime(freq, now + i * 0.15);
+    gain.gain.setValueAtTime(0, now + i * 0.15);
+    gain.gain.linearRampToValueAtTime(0.22, now + i * 0.15 + 0.02);
+    gain.gain.exponentialRampToValueAtTime(0.001, now + i * 0.15 + 0.12);
+    osc.connect(gain); gain.connect(ctx.destination);
+    osc.start(now + i * 0.15); osc.stop(now + i * 0.15 + 0.14);
+  });
+}
+function playStopSound() {
+  const ctx = getAudioCtx(); if (!ctx) return;
+  if (ctx.state === 'suspended') ctx.resume();
+  const now = ctx.currentTime;
+  [330, 247, 165].forEach((freq, i) => {
+    const osc = ctx.createOscillator(); const gain = ctx.createGain();
+    osc.type = 'sawtooth';
+    osc.frequency.setValueAtTime(freq, now + i * 0.2);
+    gain.gain.setValueAtTime(0, now + i * 0.2);
+    gain.gain.linearRampToValueAtTime(0.25, now + i * 0.2 + 0.02);
+    gain.gain.exponentialRampToValueAtTime(0.001, now + i * 0.2 + 0.3);
+    osc.connect(gain); gain.connect(ctx.destination);
+    osc.start(now + i * 0.2); osc.stop(now + i * 0.2 + 0.32);
+  });
+}
+
+/* ================================================================
+   BINTANG
+   ================================================================ */
+function launchStars(count = 30) {
+  const container = document.getElementById("star-container");
+  const symbols = ["⭐", "🌟", "✨", "💫"];
+  const colors = ["#fbbf24", "#f59e0b", "#facc15", "#fde047", "#fcd34d"];
+  for (let i = 0; i < count; i++) {
+    const star = document.createElement("div");
+    star.className = "star";
+    star.textContent = symbols[Math.floor(Math.random() * symbols.length)];
+    star.style.left = (Math.random() * 100) + "vw";
+    star.style.fontSize = (22 + Math.random() * 24) + "px";
+    star.style.color = colors[Math.floor(Math.random() * colors.length)];
+    star.style.animationDuration = (2 + Math.random() * 1.5) + "s";
+    star.style.animationDelay = (Math.random() * 0.5) + "s";
+    container.appendChild(star);
+    setTimeout(() => star.remove(), 4000);
+  }
+}
+
+/* ================================================================
+   DETEKSI TAB
+   ================================================================ */
+let tabSwitchCount = 0;
+const MAX_TAB_SWITCH = 2;
+
+document.addEventListener("visibilitychange", () => {
+  if (!simulationActive) return;
+  if (document.hidden) {
+    tabSwitchCount++;
+    if (tabSwitchCount >= MAX_TAB_SWITCH) {
+      stopSimulation();
+    } else {
+      showTabWarning();
+    }
+  }
+});
+
+function showTabWarning() {
+  const overlay = document.getElementById("warning-overlay");
+  document.getElementById("tab-count").textContent = tabSwitchCount;
+  overlay.classList.remove("hidden");
+  playWarningSound();
+  setTimeout(() => overlay.classList.add("hidden"), 3500);
+}
+
+function stopSimulation() {
+  simulationActive = false;
+  answered = false;
+  document.getElementById("warning-overlay").classList.add("hidden");
+  document.getElementById("quiz").classList.add("hidden");
+  document.getElementById("evaluation").classList.add("hidden");
+  document.getElementById("identity").classList.add("hidden");
+  document.getElementById("welcome").classList.add("hidden");
+  document.getElementById("closing").classList.add("hidden");
+  document.getElementById("stopped").classList.remove("hidden");
+  document.getElementById("stop-score").textContent = score * 10;
+  document.getElementById("stop-answered").textContent = answeredCount;
+  playStopSound();
+}
+
+/* ================================================================
+   NAVIGASI
+   ================================================================ */
+function hideAll() {
+  ["welcome","identity","quiz","evaluation","closing","stopped"].forEach(id => {
+    document.getElementById(id).classList.add("hidden");
+  });
+}
+
+function goToIdentity() {
+  hideAll();
+  document.getElementById("identity").classList.remove("hidden");
+}
+
+function backToWelcome() {
+  hideAll();
+  document.getElementById("welcome").classList.remove("hidden");
+  simulationActive = false;
+}
+
+function goToClosing() {
+  hideAll();
+  document.getElementById("closing").classList.remove("hidden");
+  // Hujan bintang perayaan
+  setTimeout(() => launchStars(60), 200);
+}
+
+/* ================================================================
+   LOGIKA KUIS
+   ================================================================ */
 function start() {
   const nama = document.getElementById("nama").value.trim();
   const kelas = document.getElementById("kelas").value.trim();
-
   if (!nama || !kelas) {
     alert("Silakan isi nama dan kelas terlebih dahulu.");
     return;
   }
-
-  document.getElementById("identity").classList.add("hidden");
+  getAudioCtx();
+  tabSwitchCount = 0;
+  simulationActive = true;
+  current = 0;
+  score = 0;
+  answeredCount = 0;
+  userAnswers = [];
+  hideAll();
   document.getElementById("quiz").classList.remove("hidden");
   showQuestion();
 }
@@ -746,22 +1838,20 @@ function showQuestion() {
   const q = questions[current];
 
   document.getElementById("number").textContent =
-    "Pertanyaan " + (current + 1) + " dari " + questions.length;
+    "Soal " + (current + 1) + " dari " + questions.length;
   document.getElementById("title").textContent = q.title;
   document.getElementById("scenario").textContent = q.scenario;
   document.getElementById("bar").style.width =
     (current / questions.length * 100) + "%";
+  document.getElementById("imageBox").innerHTML = images[q.image] || "";
 
   const feedback = document.getElementById("feedback");
   feedback.className = "feedback hidden";
   feedback.innerHTML = "";
-
-  document.getElementById("check").classList.remove("hidden");
   document.getElementById("next").classList.add("hidden");
 
   const options = document.getElementById("options");
   options.innerHTML = "";
-
   q.options.forEach((option, i) => {
     const label = document.createElement("label");
     label.className = "option";
@@ -770,42 +1860,57 @@ function showQuestion() {
       <span class="letter">${String.fromCharCode(65 + i)}</span>
       <span>${option}</span>
     `;
+    label.addEventListener("click", () => {
+      if (answered) return;
+      selectAnswer(i);
+    });
     options.appendChild(label);
   });
 }
 
-function checkAnswer() {
+function selectAnswer(selectedIndex) {
   if (answered) return;
-
-  const selected = document.querySelector('input[name="answer"]:checked');
-  if (!selected) {
-    alert("Pilih salah satu jawaban terlebih dahulu.");
-    return;
-  }
-
   answered = true;
+  answeredCount++;
+
   const q = questions[current];
-  const correct = Number(selected.value) === q.answer;
+  const correct = selectedIndex === q.answer;
+  userAnswers.push({ selected: selectedIndex, correct: correct });
 
   if (correct) score++;
+
+  document.querySelectorAll(".option").forEach((opt, i) => {
+    opt.classList.add("locked");
+    const input = opt.querySelector("input");
+    if (input) input.disabled = true;
+    if (i === q.answer) {
+      opt.classList.add("correct-answer");
+      if (input) input.checked = true;
+    }
+    if (i === selectedIndex && !correct) {
+      opt.classList.add("wrong-answer");
+    }
+  });
 
   const feedback = document.getElementById("feedback");
   feedback.className = "feedback " + (correct ? "correct" : "wrong");
   feedback.innerHTML =
-    (correct ? "<strong>Benar! Hebat!</strong>" : "<strong>Belum tepat.</strong>") +
+    (correct ? "<strong>Benar! Hebat! 🌟</strong>" : "<strong>Belum tepat.</strong>") +
     "<br>Jawaban yang benar: <strong>" + String.fromCharCode(65 + q.answer) +
     ". " + q.options[q.answer] + "</strong>" +
     "<br><br><strong>💡 Pembahasan:</strong> " + q.explanation;
 
-  document.querySelectorAll('input[name="answer"]').forEach(el => {
-    el.disabled = true;
-  });
+  if (correct) {
+    playCorrectSound();
+    launchStars(35);
+  } else {
+    playWrongSound();
+  }
 
-  document.getElementById("check").classList.add("hidden");
   const nextBtn = document.getElementById("next");
   nextBtn.classList.remove("hidden");
   nextBtn.textContent =
-    current === questions.length - 1 ? "Lihat Hasil" : "Soal Berikutnya";
+    current === questions.length - 1 ? "Lihat Evaluasi ➜" : "Soal Berikutnya";
 }
 
 function nextQuestion() {
@@ -813,18 +1918,20 @@ function nextQuestion() {
   if (current < questions.length) {
     showQuestion();
   } else {
-    showResult();
+    showEvaluation();
   }
 }
 
-function showResult() {
-  document.getElementById("quiz").classList.add("hidden");
-  document.getElementById("result").classList.remove("hidden");
+/* ================================================================
+   EVALUASI
+   ================================================================ */
+function showEvaluation() {
+  simulationActive = false;
+  hideAll();
+  document.getElementById("evaluation").classList.remove("hidden");
 
-  const nilai = score * 20;
+  const nilai = score * 10;
   document.getElementById("score").textContent = nilai;
-
-  // Animasi lingkaran skor
   const deg = (nilai / 100) * 360;
   document.getElementById("circle").style.setProperty('--deg', deg + 'deg');
 
@@ -832,26 +1939,90 @@ function showResult() {
     "👤 " + document.getElementById("nama").value +
     "   |   🏫 Kelas " + document.getElementById("kelas").value;
 
-  let message = "";
-  if (nilai >= 80) message = "🏆 Sangat Baik! Kamu Teladan Pancasila!";
-  else if (nilai >= 60) message = "👍 Baik, Terus Tingkatkan!";
-  else message = "💪 Tetap Semangat, Pelajari Kembali Pancasila!";
-  document.getElementById("message").textContent = message;
+  // Predikat
+  let predikat, predikatDesc, message;
+  if (nilai >= 90) {
+    predikat = "A — Sangat Baik"; predikatDesc = "Kamu telah memahami dan mengamalkan nilai-nilai Pancasila dengan sangat baik!";
+    message = "🏆 Luar Biasa! Kamu Teladan Pancasila!";
+  } else if (nilai >= 80) {
+    predikat = "B — Baik"; predikatDesc = "Pemahamanmu tentang Pancasila sudah baik. Pertahankan!";
+    message = "🌟 Hebat! Terus Tingkatkan!";
+  } else if (nilai >= 70) {
+    predikat = "C — Cukup"; predikatDesc = "Pemahamanmu cukup, namun masih perlu ditingkatkan lagi.";
+    message = "👍 Cukup Baik, Terus Belajar!";
+  } else if (nilai >= 60) {
+    predikat = "D — Kurang"; predikatDesc = "Pemahamanmu masih kurang. Perlu belajar lebih giat lagi.";
+    message = "📚 Ayo Belajar Lagi!";
+  } else {
+    predikat = "E — Sangat Kurang"; predikatDesc = "Pemahamanmu masih sangat kurang. Jangan menyerah, terus belajar!";
+    message = "💪 Semangat, Jangan Menyerah!";
+  }
 
-  document.getElementById("summary").textContent =
-    "Jawaban benar " + score + " dari " + questions.length + " soal. " +
-    "Kamu telah menyelesaikan simulasi penerapan Pancasila.";
+  document.getElementById("message").textContent = message;
+  document.getElementById("predikat").textContent = predikat;
+  document.getElementById("predikat-desc").textContent = predikatDesc;
+
+  // Warna predikat
+  const predikatEl = document.getElementById("predikat");
+  if (nilai >= 90) predikatEl.style.color = "#10b981";
+  else if (nilai >= 80) predikatEl.style.color = "#3b82f6";
+  else if (nilai >= 70) predikatEl.style.color = "#f59e0b";
+  else if (nilai >= 60) predikatEl.style.color = "#f97316";
+  else predikatEl.style.color = "#ef4444";
+
+  // Analisis per soal
+  const list = document.getElementById("analysis-list");
+  list.innerHTML = "";
+  questions.forEach((q, i) => {
+    const ua = userAnswers[i];
+    const isCorrect = ua && ua.correct;
+    const item = document.createElement("div");
+    item.className = "analysis-item " + (isCorrect ? "benar" : "salah");
+    item.innerHTML = `
+      <span class="icon">${isCorrect ? "✅" : "❌"}</span>
+      <span class="q-num">#${i + 1}</span>
+      <span class="q-title">${q.title.replace(/^Soal \d+ – /, "")}</span>
+      <span class="q-status">${isCorrect ? "BENAR" : "SALAH"}</span>
+    `;
+    list.appendChild(item);
+  });
+
+  // Rekomendasi
+  let rekomendasi = "";
+  if (nilai >= 90) {
+    rekomendasi = "Kamu sudah sangat memahami nilai-nilai Pancasila. Teruslah menjadi teladan di lingkungan sekolah dan masyarakat. Ajak teman-teman untuk mengamalkan Pancasila bersama-sama!";
+  } else if (nilai >= 80) {
+    rekomendasi = "Pemahamanmu sudah baik! Pelajari kembali soal-soal yang masih salah untuk memperdalam pemahaman, terutama penerapan sila dalam kehidupan sehari-hari.";
+  } else if (nilai >= 70) {
+    rekomendasi = "Pemahamanmu cukup, tetapi masih ada beberapa nilai sila yang perlu diperdalam. Baca kembali materi tentang kelima sila dan contoh penerapannya.";
+  } else if (nilai >= 60) {
+    rekomendasi = "Kamu perlu belajar lebih giat lagi. Fokus pada pemahaman makna kelima sila Pancasila dan contoh penerapannya dalam kehidupan sehari-hari. Diskusikan dengan guru atau teman.";
+  } else {
+    rekomendasi = "Jangan menyerah! Pelajari kembali materi Pancasila dari awal, mulai dari makna setiap sila hingga contoh penerapannya. Mintalah bimbingan guru untuk memahami lebih dalam.";
+  }
+  document.getElementById("rekomendasi").textContent = rekomendasi;
+
+  if (nilai >= 80) {
+    setTimeout(() => launchStars(50), 300);
+  }
 }
 
+/* ================================================================
+   RESTART
+   ================================================================ */
 function restart() {
   current = 0;
   score = 0;
   answered = false;
+  answeredCount = 0;
+  tabSwitchCount = 0;
+  simulationActive = false;
+  userAnswers = [];
 
-  document.getElementById("result").classList.add("hidden");
-  document.getElementById("identity").classList.remove("hidden");
+  hideAll();
+  document.getElementById("welcome").classList.remove("hidden");
   document.getElementById("nama").value = "";
-  document.getElementById("kelas").value = "";
+  document.getElementById("kelas").value = "XII";
   document.getElementById("circle").style.setProperty('--deg', '0deg');
 }
 </script>
